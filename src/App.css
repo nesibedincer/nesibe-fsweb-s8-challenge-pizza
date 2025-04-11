@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Barlow:wght@400;600&family=Quattrocento&display=swap');
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -13,6 +15,13 @@
   --beige: #FAF7F2;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Barlow', sans-serif;
   line-height: 1.6;
@@ -20,33 +29,40 @@ body {
   background-color: var(--beige);
 }
 
-/* Container */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Hero Section */
 .hero {
   background-color: var(--red);
   min-height: 100vh;
+  width: 100vw;
   position: relative;
   overflow: hidden;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
   text-align: center;
   color: white;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   position: relative;
   z-index: 2;
 }
 
-.logo {
-  margin-bottom: 2rem;
+.hero h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -54,14 +70,8 @@ body {
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-family: 'Quattrocento', serif;
-  font-size: 2rem;
   margin-bottom: 2rem;
+  line-height: 1.2;
 }
 
 .cta-button {
@@ -74,10 +84,26 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   transition: transform 0.3s ease;
+  font-family: 'Barlow', sans-serif;
 }
 
 .cta-button:hover {
   transform: scale(1.05);
+}
+
+/* Pizza Image */
+.pizza-image {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: -2rem auto 0;
+  z-index: 1;
+}
+
+.pizza-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Decorative Elements */
@@ -90,30 +116,76 @@ body {
   pointer-events: none;
 }
 
-.pizza-image {
-  position: relative;
-  max-width: 600px;
-  margin: 2rem auto 0;
-  z-index: 1;
+.decorative-elements img {
+  position: absolute;
+  width: 50px;
+  height: auto;
 }
 
-.pizza-image img {
-  width: 100%;
-  height: auto;
+.basil-1 {
+  top: 15%;
+  left: 10%;
+  transform: rotate(-30deg);
+}
+
+.basil-2 {
+  bottom: 40%;
+  right: 15%;
+  transform: rotate(45deg);
+}
+
+.chili-1 {
+  top: 20%;
+  right: 25%;
+  transform: rotate(45deg);
+}
+
+.chili-2 {
+  bottom: 30%;
+  left: 20%;
+  transform: rotate(-30deg);
+}
+
+.chili-3 {
+  top: 40%;
+  right: 10%;
+  transform: rotate(15deg);
+}
+
+.mushroom-1 {
+  top: 35%;
+  left: 15%;
+  transform: rotate(-15deg);
+}
+
+.mushroom-2 {
+  bottom: 25%;
+  right: 30%;
+  transform: rotate(30deg);
+}
+
+.garlic-1 {
+  bottom: 35%;
+  left: 30%;
+  transform: rotate(-45deg);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
   .hero h1 {
     font-size: 3rem;
   }
   
-  .hero p {
-    font-size: 1.5rem;
-  }
-  
   .pizza-image {
     max-width: 400px;
+  }
+
+  .decorative-elements img {
+    width: 30px;
   }
 }
 

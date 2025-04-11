@@ -14,7 +14,14 @@ function App() {
       </div>
       
       <div className="decorative-elements">
-        {/* Decorative elements will be added here */}
+        <img className="basil-1" src="/images/iteration-1-images/basil.png" alt="" />
+        <img className="basil-2" src="/images/iteration-1-images/basil.png" alt="" />
+        <img className="chili-1" src="/images/iteration-1-images/chili.png" alt="" />
+        <img className="chili-2" src="/images/iteration-1-images/chili.png" alt="" />
+        <img className="chili-3" src="/images/iteration-1-images/chili.png" alt="" />
+        <img className="mushroom-1" src="/images/iteration-1-images/mushroom.png" alt="" />
+        <img className="mushroom-2" src="/images/iteration-1-images/mushroom.png" alt="" />
+        <img className="garlic-1" src="/images/iteration-1-images/garlic.png" alt="" />
       </div>
     </div>
   )
